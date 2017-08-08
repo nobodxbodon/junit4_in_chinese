@@ -1,6 +1,6 @@
 package com.github.program_in_chinese.junit4_in_chinese;
 
-import static com.github.program_in_chinese.junit4_in_chinese.断言.相等;
+import static com.github.program_in_chinese.junit4_in_chinese.断言类.相等;
 
 import org.junit.Test;
 
