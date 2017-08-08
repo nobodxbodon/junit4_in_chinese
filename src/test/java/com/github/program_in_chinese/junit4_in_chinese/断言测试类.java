@@ -7,7 +7,7 @@ import org.junit.Test;
 public class 断言测试类 {
 
   @Test
-  public void test() {
+  public void 基本测试() {
     相等(1, 1);
   }
 
