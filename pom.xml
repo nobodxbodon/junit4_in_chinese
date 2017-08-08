@@ -3,9 +3,9 @@
   <groupId>com.github.program_in_chinese</groupId>
   <artifactId>junit4_in_chinese</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>JUnit中文化</name>
+  <name>JUnit4中文化</name>
   <description>添加中文API</description>
-  <url>https://github.com/nobodxbodon/zhconverter</url>
+  <url>https://github.com/program-in-chinese/junit4_in_chinese</url>
   <licenses>
 	<license>
 	  <name>GNU Lesser General Public License</name>
@@ -13,14 +13,12 @@
 	  <distribution>repo</distribution>
 	</license>
   </licenses>
-  <!-- TODO: 添加到git库后补全
   <scm>
-	<connection></connection>
-	<developerConnection></developerConnection>
+	<connection>scm:git:https://github.com/program-in-chinese/junit4_in_chinese.git</connection>
+	<developerConnection>scm:git:https://github.com/program-in-chinese/junit4_in_chinese.git</developerConnection>
 	<tag>HEAD</tag>
-	<url></url>
+	<url>https://github.com/program-in-chinese/junit4_in_chinese</url>
   </scm>
-  -->
   <!-- 团队名称确定后修改 -->
   <developers>
 	<developer>
@@ -33,7 +31,6 @@
 		<groupId>junit</groupId>
 		<artifactId>junit</artifactId>
 		<version>4.12</version>
-		<scope>test</scope>
 	</dependency>
   </dependencies>
   <build>
