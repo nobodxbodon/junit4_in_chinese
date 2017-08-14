@@ -68,8 +68,13 @@ public class 运行器 extends BlockJUnit4ClassRunner{
 
     private Class getExpectedException(FrameworkMethod method){
         测试 anno = method.getAnnotation(测试.class);
-        if (anno != null && anno.期望异常() != None.class){
-            return anno.期望异常();
+        // 在测试注解存在时完全忽略Test
+        if (anno != null){
+            if (anno.期望异常() != None.class){
+                return anno.期望异常();
+            }else{
+                return null;
+            }
         }
 
         Test testAnno = method.getAnnotation(Test.class);
@@ -86,8 +91,13 @@ public class 运行器 extends BlockJUnit4ClassRunner{
 
     private long getTimeout(FrameworkMethod method){
         测试 anno = method.getAnnotation(测试.class);
-        if (anno != null && anno.期望异常() != None.class){
-            return anno.超时();
+        // 在测试注解存在时完全忽略Test
+        if (anno != null){
+            if (anno.期望异常() != None.class){
+                return anno.超时();
+            }else{
+                return 0;
+            }
         }
 
         Test testAnno = method.getAnnotation(Test.class);
