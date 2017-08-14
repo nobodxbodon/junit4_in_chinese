@@ -37,7 +37,7 @@ public class 运行器 extends BlockJUnit4ClassRunner{
     }
 
     @Override
-    protected void validateTestMethods(List errors){
+    protected void validateTestMethods(List<Throwable> errors){
         validatePublicVoidNoArgMethods(Test.class, false, errors);
         validatePublicVoidNoArgMethods(测试.class, false, errors);
     }
