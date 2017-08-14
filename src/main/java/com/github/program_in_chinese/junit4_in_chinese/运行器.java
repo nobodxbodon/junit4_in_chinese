@@ -72,7 +72,7 @@ public class 运行器 extends BlockJUnit4ClassRunner{
                .build(next);
     }
 
-    private Class getExpectedException(FrameworkMethod method){
+    private Class<? extends Throwable> getExpectedException(FrameworkMethod method){
         测试 anno = method.getAnnotation(测试.class);
         // 在测试注解存在时完全忽略Test
         if (anno != null){
