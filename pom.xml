@@ -25,6 +25,10 @@
 	  <id>nobodxbodon</id>
 	  <name></name>
 	</developer>
+    <developer>
+        <name>Azige</name>
+        <email>zzb12@qq.com</email>
+    </developer>
   </developers>
   <dependencies>
 	<dependency>
