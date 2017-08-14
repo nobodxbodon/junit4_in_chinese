@@ -6,6 +6,7 @@ import java.util.Collections;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.junit.Test.None;
@@ -63,7 +64,12 @@ public class 运行器 extends BlockJUnit4ClassRunner{
     protected Statement withPotentialTimeout(FrameworkMethod method,
         Object test, Statement next){
         long timeout = getTimeout(method);
-        return timeout > 0 ? new FailOnTimeout(next, timeout) : next;
+        if (timeout <= 0) {
+            return next;
+        }
+        return FailOnTimeout.builder()
+               .withTimeout(timeout, TimeUnit.MILLISECONDS)
+               .build(next);
     }
 
     private Class getExpectedException(FrameworkMethod method){
