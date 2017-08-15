@@ -19,7 +19,7 @@ import org.junit.runners.model.Statement;
 
 /**
  * 扩展 BlockJUnit4ClassRunner 令其能解析 {@link 测试}。
- * 当 @Test 与 @测试 同时存在时，以 @测试 优先。
+ * 当 @Test 与 @测试 同时声明时，仅 @测试 有效.
  *
  * @author Azige
  */
@@ -45,19 +45,8 @@ public class 运行器 extends BlockJUnit4ClassRunner{
 
     @Override
     protected Statement possiblyExpectingExceptions(FrameworkMethod method, Object test, Statement next){
-        测试 anno = method.getAnnotation(测试.class);
-        if (anno != null){
-            return expectsException(method) ? new ExpectException(next,
-                getExpectedException(method)) : next;
-        }
-
-        Test testAnno = method.getAnnotation(Test.class);
-        if (testAnno != null){
-            return expectsException(method) ? new ExpectException(next,
-                getExpectedException(method)) : next;
-        }
-
-        throw new AssertionError("不应该执行到这里");
+        Class<? extends Throwable> 期待异常类 = getExpectedException(method);
+        return 期待异常类 != null ? new ExpectException(next, 期待异常类) : next;
     }
 
     @Override
@@ -73,44 +62,24 @@ public class 运行器 extends BlockJUnit4ClassRunner{
     }
 
     private Class<? extends Throwable> getExpectedException(FrameworkMethod method){
-        测试 anno = method.getAnnotation(测试.class);
+        测试 测试注解 = method.getAnnotation(测试.class);
         // 在测试注解存在时完全忽略Test
-        if (anno != null){
-            if (anno.期望异常() != None.class){
-                return anno.期望异常();
-            }else{
-                return null;
-            }
+        if (测试注解 != null){
+            return 测试注解.期望异常() != None.class ? 测试注解.期望异常() : null;
         }
 
-        Test testAnno = method.getAnnotation(Test.class);
-        if (testAnno != null && testAnno.expected() != None.class){
-            return testAnno.expected();
-        }
-
-        return null;
-    }
-
-    private boolean expectsException(FrameworkMethod method){
-        return getExpectedException(method) != null;
+        Test test注解 = method.getAnnotation(Test.class);
+        return test注解 != null && test注解.expected() != None.class ? test注解.expected() : null;
     }
 
     private long getTimeout(FrameworkMethod method){
-        测试 anno = method.getAnnotation(测试.class);
+        测试 测试注解 = method.getAnnotation(测试.class);
         // 在测试注解存在时完全忽略Test
-        if (anno != null){
-            if (anno.期望异常() != None.class){
-                return anno.超时();
-            }else{
-                return 0;
-            }
+        if (测试注解 != null){
+            return 测试注解.期望异常() != None.class ? 测试注解.超时() : 0;
         }
 
-        Test testAnno = method.getAnnotation(Test.class);
-        if (testAnno != null && testAnno.expected() != None.class){
-            return testAnno.timeout();
-        }
-
-        return 0;
+        Test test注解 = method.getAnnotation(Test.class);
+        return test注解 != null && test注解.expected() != None.class ? test注解.timeout() : 0;
     }
 }
