@@ -9,7 +9,7 @@ import static org.junit.Assert.fail;
 /**
  * 所有方法直接调用Assert原生方法, 尽量避免增加调试时的信息
  */
-public class 断言类 {
+public class 断言 {
   public static void 为真(String 反馈信息, boolean 条件) {
     assertTrue(反馈信息, 条件);
   }

@@ -1,7 +1,7 @@
 
 package com.github.program_in_chinese.junit4_in_chinese;
 
-import static com.github.program_in_chinese.junit4_in_chinese.断言类.*;
+import static com.github.program_in_chinese.junit4_in_chinese.断言.*;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
