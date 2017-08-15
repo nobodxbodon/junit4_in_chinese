@@ -31,25 +31,25 @@ public class 运行器测试类{
 
     @Test(expected = IllegalStateException.class)
     @测试
-    public void 混用_Test先(){
+    public void 混用_先Test(){
         // 什么也不做，如果只有 @Test 的情况下应当测试失败
     }
 
     @测试
     @Test(expected = IllegalStateException.class)
-    public void 混用_测试先(){
+    public void 混用_先测试(){
         // 什么也不做，如果只有 @Test 的情况下应当测试失败
     }
 
     @Test(expected = IllegalStateException.class)
     @测试(期望异常 = NumberFormatException.class)
-    public void 混用期望异常_Test先(){
+    public void 混用期望异常_先Test(){
         throw new NumberFormatException();
     }
 
     @测试(期望异常 = NumberFormatException.class)
     @Test(expected = IllegalStateException.class)
-    public void 混用期望异常_测试先(){
+    public void 混用期望异常_先测试(){
         throw new NumberFormatException();
     }
 
