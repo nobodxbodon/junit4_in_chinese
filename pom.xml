@@ -8,8 +8,8 @@
   <url>https://github.com/program-in-chinese/junit4_in_chinese</url>
   <licenses>
 	<license>
-	  <name>GNU Lesser General Public License</name>
-	  <url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+	  <name>Eclipse Public License 1.0</name>
+	  <url>http://www.eclipse.org/legal/epl-v10.html</url>
 	  <distribution>repo</distribution>
 	</license>
   </licenses>
@@ -19,15 +19,14 @@
 	<tag>HEAD</tag>
 	<url>https://github.com/program-in-chinese/junit4_in_chinese</url>
   </scm>
-  <!-- 团队名称确定后修改 -->
   <developers>
 	<developer>
 	  <id>nobodxbodon</id>
-	  <name></name>
+	  <name>吴烜</name>
 	</developer>
     <developer>
-        <name>Azige</name>
-        <email>zzb12@qq.com</email>
+	  <name>Azige</name>
+	  <email>zzb12@qq.com</email>
     </developer>
   </developers>
   <dependencies>
