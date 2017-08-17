@@ -16,7 +16,7 @@ import org.junit.Test.None;
 // TODO: 翻译 org.junit.Test 的参考文档？
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface 测试{
+public @interface 测试 {
 
     Class<? extends Throwable> 期望异常() default None.class;
 
