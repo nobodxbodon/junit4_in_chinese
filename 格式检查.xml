@@ -114,11 +114,12 @@
              value="Package name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="TypeName">
+            <property name="format" value="^[A-Z\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*$"/>
             <message key="name.invalidPattern"
              value="Type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MemberName">
-            <property name="format" value="^[a-z][a-z0-9][a-zA-Z0-9]*$"/>
+            <property name="format" value="^[a-z\u4E00-\u9FA5][a-z0-9\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*$"/>
             <message key="name.invalidPattern"
              value="Member name ''{0}'' must match pattern ''{1}''."/>
         </module>
@@ -128,7 +129,7 @@
              value="Parameter name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="CatchParameterName">
-            <property name="format" value="^[a-z]([a-z0-9][a-zA-Z0-9]*)?$"/>
+            <property name="format" value="^[a-z\u4E00-\u9FA5]([a-z0-9\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*)?$"/>
             <message key="name.invalidPattern"
              value="Catch parameter name ''{0}'' must match pattern ''{1}''."/>
         </module>
@@ -139,17 +140,17 @@
              value="Local variable name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="ClassTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z\u4E00-\u9FA5][0-9\u4E00-\u9FA5]?)$|([A-Z\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*[T]$)"/>
             <message key="name.invalidPattern"
              value="Class type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="MethodTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z\u4E00-\u9FA5][0-9\u4E00-\u9FA5]?)$|([A-Z\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*[T]$)"/>
             <message key="name.invalidPattern"
              value="Method type name ''{0}'' must match pattern ''{1}''."/>
         </module>
         <module name="InterfaceTypeParameterName">
-            <property name="format" value="(^[A-Z][0-9]?)$|([A-Z][a-zA-Z0-9]*[T]$)"/>
+            <property name="format" value="(^[A-Z\u4E00-\u9FA5][0-9\u4E00-\u9FA5]?)$|([A-Z\u4E00-\u9FA5][a-zA-Z0-9\u4E00-\u9FA5]*[T]$)"/>
             <message key="name.invalidPattern"
              value="Interface type name ''{0}'' must match pattern ''{1}''."/>
         </module>

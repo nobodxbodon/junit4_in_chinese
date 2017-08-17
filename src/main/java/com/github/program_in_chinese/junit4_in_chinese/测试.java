@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 import org.junit.Test.None;
 
 /**
- * {@link org.junit.Test} 的中文等价替换。
+ * {@link org.junit.Test} 的中文等价替换.
  *
  * @author Azige
  */
@@ -18,7 +18,15 @@ import org.junit.Test.None;
 @Retention(RetentionPolicy.RUNTIME)
 public @interface 测试 {
 
-    Class<? extends Throwable> 期望异常() default None.class;
+  /**
+   * 
+   * @return
+   */
+  Class<? extends Throwable> 期望异常() default None.class;
 
-    long 超时() default 0L;
+  /**
+   * 
+   * @return
+   */
+  long 超时() default 0L;
 }

@@ -134,7 +134,8 @@
               <configLocation>格式检查.xml</configLocation>
               <encoding>UTF-8</encoding>
               <consoleOutput>true</consoleOutput>
-              <failsOnError>true</failsOnError>
+              <failOnViolation>true</failOnViolation>
+              <violationSeverity>warning</violationSeverity>
               <linkXRef>false</linkXRef>
             </configuration>
             <goals>
