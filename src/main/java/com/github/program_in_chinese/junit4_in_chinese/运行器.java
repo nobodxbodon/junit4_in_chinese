@@ -18,7 +18,8 @@ import org.junit.runners.model.InitializationError;
 import org.junit.runners.model.Statement;
 
 /**
- * 扩展 BlockJUnit4ClassRunner 令其能解析 {@link 测试}。 当 @Test 与 @测试 同时声明时，仅 @测试 有效.
+ * 扩展 BlockJUnit4ClassRunner 令其能解析 {@link com.github.program_in_chinese.junit4_in_chinese.测试}.
+ * 当 @Test 与 @测试 同时声明时，仅 @测试 有效.
  *
  * @author Azige
  */
