@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/program-in-chinese/junit4_in_chinese.svg?branch=master)](https://travis-ci.org/program-in-chinese/junit4_in_chinese)
+
 # junit4_in_chinese
 JUnit4中文化. 起源: https://github.com/program-in-chinese/overview/issues/10
 
